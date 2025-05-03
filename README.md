@@ -29,3 +29,47 @@ kan bare trekkes en gang. De dyreste vinene blir loddet ut sist.
   ta gjerne med
   egen maskin så du viser fram i et miljø du er kjent med selv.
 - Publiser løsningen på Azure (man kan opprette gratiskonto)
+
+## MVP Break down
+- 1 GET - Get tickets
+- 1 POST - Reserve ticket(s)
+- Set up services, maybe repository
+- Set up storage - EF core with in memory
+- Set up Entities - Ticket, Wine, Draw
+- State reset
+- Azure app service
+
+### If time 
+- Lottery draw
+- Guards various places
+- Sale Report
+
+## Result
+
+**Total time spent**: 2h 13m
+
+### Application can:
+- Show list of tickets
+- Reserve (sell) tickets
+- Draw winners
+- Reset
+
+### Possible improvements if more time 
+- Persistent data storage (Azure SQL), EF core migrations, store connections strings in Azure Key vault
+- Better separation of concern. Lottery service does too much. Separate data fetching logic 
+  into repositories, handle lottery session separately.
+- Use the information given in the task to bring value. For example, it is stated that each
+  ticket is 10kr, then one can assume that some form of a ticket sale report would be valued.
+  Additionally some form of report on how many tickets were purchased and how many people participated.
+- Payment logic to handle payments. Payment provider integrations
+- No present Owner entity for the person who bought the tickets.
+- Write unit tests for Domain logic. 
+- Write integration tests for service and repository implementations, and api endpoints.
+- Authentication and authorization and protect administrative actions.
+- Better validation and error handling. Standardized responses.
+- Logging, monitoring 
+- Ci/cd
+- If Saas, then create Documentation and client sdk based on the OpenAPI spec.
+- Frontend app
+- Security, https, enforce hsts
+
