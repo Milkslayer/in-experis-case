@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineLottery.Api", "src\WineLottery.Api\WineLottery.Api.csproj", "{3EBFA122-E5BB-43CC-AFF3-1A0CE192667A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineLottery.Application", "src\WineLottery.Application\WineLottery.Application.csproj", "{DC158F11-728C-4D01-AB5A-D0206B1D844B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineLottery.Domain", "src\WineLottery.Domain\WineLottery.Domain.csproj", "{28679B35-5BD5-430C-AD3B-9C342BA84646}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineLottery.Infrastructure", "src\WineLottery.Infrastructure\WineLottery.Infrastructure.csproj", "{E8C3697F-3356-4A47-ADBA-4A5F181F7A01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{3EBFA122-E5BB-43CC-AFF3-1A0CE192667A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EBFA122-E5BB-43CC-AFF3-1A0CE192667A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EBFA122-E5BB-43CC-AFF3-1A0CE192667A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC158F11-728C-4D01-AB5A-D0206B1D844B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC158F11-728C-4D01-AB5A-D0206B1D844B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC158F11-728C-4D01-AB5A-D0206B1D844B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC158F11-728C-4D01-AB5A-D0206B1D844B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28679B35-5BD5-430C-AD3B-9C342BA84646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28679B35-5BD5-430C-AD3B-9C342BA84646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28679B35-5BD5-430C-AD3B-9C342BA84646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28679B35-5BD5-430C-AD3B-9C342BA84646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C3697F-3356-4A47-ADBA-4A5F181F7A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C3697F-3356-4A47-ADBA-4A5F181F7A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C3697F-3356-4A47-ADBA-4A5F181F7A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C3697F-3356-4A47-ADBA-4A5F181F7A01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
