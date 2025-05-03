@@ -73,3 +73,28 @@ kan bare trekkes en gang. De dyreste vinene blir loddet ut sist.
 - Frontend app
 - Security, https, enforce hsts
 
+
+## How to Run
+1. Make sure you have .NET 9 with `dotnet` installed
+   2. Verify by running `dotnet --version`
+2. Pull repo
+3. In the root of the repo run `dotnet build` and then `dotnet run --project .\src\WineLottery.Api\`
+4. The app will run on port `7172` and can be accessed at `https://localhost:7172/swagger/index.html`
+
+
+## Deployment
+```bash
+az login
+
+az group create --name experis-case --location northeurope
+az provider register --namespace Microsoft.Web
+az provider show --namespace Microsoft.Web --query "registrationState"
+az appservice plan create --name wine-lottery-plan --resource-group experis-case --sku F1 --is-linux
+
+az webapp create --resource-group experis-case --plan wine-lottery-plan --name winelotterydemo --runtime "DOTNETCORE:9.0" --deployment-local-git
+
+
+az webapp deployment list-publishing-credentials --name winelotterydemo --resource-group experis-case --query "{user: publishingUserName, pwd: publishingPassword}" --output json
+
+git remote add azure https://$winelotterydemo@winelotterydemo.scm.azurewebsites.net/winelotterydemo.git
+```
